@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livraria vendas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tudo">
+        <div class="header-box">
+            <div class="header">
+                <nav class="menu">
+                    <ul class="navbar-itens">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="#Produtos">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre nós</a></li>
+                    </ul>
+                </nav>
+                <a href="login.html" class="login">Login</a>
+            </div>
+        </div>
+
+        <main>
+
+        </main>
+    </div>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte2)
+
+}
+
+body{
+    background-color: var(--cor2);
+}
+
+.header-box{
+    background-color: var(--cor1);
+    box-shadow: 0 2px 10px var(--cor1);
+    position: sticky;
+    z-index: 1000;
+    padding: 15px 0;
+    margin: 3% 20% 0px 20%;
+    border-radius: 20px;
+}
+.header{
+    width: 50%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menu{
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-itens{
+    padding: 15px 0;
+    
+    display: flex;
+    gap: 40px;
+    position: relative;
+
+}
+
+
+.navbar-itens li{
+    list-style: none;
+
+}
+
+.navbar-itens a{
+    gap: 30px;
+    padding: 6px;
+    list-style: none;
+    font-family: var(--fonte1);
+    transition: color 0.5s ease-out;
+    color: var(--cor2);
+    position: relative;
+    text-decoration: none;
+}
+.navbar-itens a:hover{
+    color: var(--cor3);
+
+}
+.login{
+    
+    font-family: var(--fonte1);
+    background-color: var(--cor4);
+    color: var(--cor2) ;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.login:hover{
+    background-color: var(--cor1);
+    
+    box-shadow: 6px 6px var(--cor2);
+
+}
+
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+
+</style>

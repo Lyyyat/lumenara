@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lumenara</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="tudo">
+        <div class="header-box">
+            <div class="header">
+            <div class="user-info">
+                <img src="img/peixe.png" alt="logo" class="site-logo">
+                <div class="user-avatar" style="display: none;"></div>
+                <span class="user-greeting" style="display: none;"></span>
+            </div>
+            <nav class="menu">
+                <ul class="navbar-itens">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="dropdown">
+                        <a href="#Produtos" class="dropbtn">Produtos</a>
+                        <div class="dropdown-content">
+                            <a href="#">Álbuns</a>
+                            <a href="#">Lightsticks</a>
+                            <a href="#">Merch</a>
+                        </div>
+                    </li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="login">Login</a>
+                <button class="logout" style="display: none;">Logout</button>
+            </div>
+        </div>
+
+        </div>
+        <section>
+            <input id="campo-pesquisa" type="text" placeholder="Digite o nome do álbum ou artista">
+            <button onclick="pesquisar()">Pesquisar</button>
+        </section>
+
+        <section class="resultados-pesquisa" id="resultados-pesquisa">
+        </section>
+        <main>
+            
+
+           <section id="Produtos">
+            <h1>Produtos</h1>
+            <div class="carrossel-container">
+                <button class="carrossel-seta seta-esquerda">&lt;</button>
+                <div class="carrossel">
+                    <div class="produtos-wrapper">
+                        <!-- Produtos serão inseridos aqui via JavaScript -->
+                    </div>
+                </div>
+                <button class="carrossel-seta seta-direita">&gt;</button>
+            </div>
+            </section>
+            
+            <!-- Pop-up de detalhes do produto -->
+            <div id="produto-popup" class="popup">
+                <div class="popup-content">
+                    <span class="close-popup">&times;</span>
+                    <img id="popup-img" src="" alt="Produto">
+                    <h2 id="popup-nome"></h2>
+                    <p id="popup-descricao"></p>
+                    <p class="preco">Preço: R$ 59,90</p>
+                    <a id="popup-link" href="#" class="ver-mais">Ver mais</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

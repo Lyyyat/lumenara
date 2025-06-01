@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <title>Login</title>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+  <div class="caixa">
+    <form>
+      <div class="titulo">
+        <h1>Login:</h1>
+      </div>
+      <div>
+        <label>E-mail:</label><br />
+        <input type="email" id="email" placeholder="seu@email.com" onchange="validacao()" />
+      </div>
+      <div>
+        <label>Senha:</label><br />
+        <input type="password" id="password" placeholder="senha" onchange="validacao()" />
+      </div>
+      <div>
+        <button type="button" class="solid" id="login-button" disabled>Entrar</button>
+      </div>
+      <div>
+        <button type="button" class="clear" id="recover-password-button" disabled>Recuperar Senha</button>
+      </div>
+      <div>
+        <button type="button" id="signup-button">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+    
+<style>
+    body {
+      background: var(--cor3);
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    input, button {
+      padding: 5px;
+      margin-bottom: 5px;
+      font-weight: bold;
+      width: -webkit-fill-available;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .caixa {
+      width: 400px;
+      border-radius: 20px;
+      background-color: var(--cor2);
+      border: 4px solid var(--cor1);
+      padding: 50px;
+    }
+
+    .caixa h1 {
+      margin-top: 0;
+      font-family: var(--fonte1);
+      color: var(--cor1);
+    }
+
+    label {
+      font-family: var(--fonte2);
+    }
+
+    :root {
+      --cor1: #45462A;
+      --cor2: #f4e3b2;
+      --cor3: #947268;
+      --cor4: #c2486a;
+      --fonte2: "Inter", sans-serif;
+      --fonte1: "Cherry Bomb One", system-ui;
+    }
+  </style>
+  <script src="login.js"></script>
+</body>
+</html>
