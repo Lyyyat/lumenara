@@ -504,4 +504,20 @@ h1{
     display: block;
 }
 
+.footer{
+    margin-bottom: -25px;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 8px;
+    color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor1);
+    height: 85px;
+
+    
+    text-align: center;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
