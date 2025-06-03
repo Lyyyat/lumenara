@@ -1,18 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
   <title>Login</title>
 
-  <!-- Firebase SDKs -->
   <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth-compat.js"></script>
 </head>
 <body>
+    <a href="index.html" class="botao-voltar" title="Voltar">
+    &#8592;
+    </a>
   <div class="caixa">
     <form>
       <div class="titulo">
@@ -39,53 +42,158 @@
   </div>
     
 <style>
-    body {
-      background: var(--cor3);
+     body {
+      background-color: var(--cor3);
+      background: url('img/anicro.jpg');
+      background-size: cover;
+      background-position: center;
       font-weight: bold;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
 
-    input, button {
-      padding: 5px;
-      margin-bottom: 5px;
+      .botao-voltar {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #5A4E3C;
+      color: #fff;
+      font-size: 24px;
       font-weight: bold;
-      width: -webkit-fill-available;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+
+    .botao-voltar:hover {
+      background-color: #C94A4A;
+      transform: scale(1.1);
+    }
+
+    input {
+      padding: 12px;
+      margin-bottom: 15px;
+      font-weight: bold;
+      width: 100%;
+      border: 2px solid var(--cor1);
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.8);
+      font-family: var(--fonte2);
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--cor4);
+      box-shadow: 0 0 0 3px rgba(194, 72, 106, 0.2);
     }
 
     button {
       cursor: pointer;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-family: var(--fonte1);
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 1rem;
     }
 
     .caixa {
       width: 400px;
       border-radius: 20px;
-      background-color: var(--cor2);
+      background-color: rgba(244, 227, 178, 0.6);
       border: 4px solid var(--cor1);
-      padding: 50px;
+      padding: 40px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
     }
 
     .caixa h1 {
       margin-top: 0;
+      margin-bottom: 20px;
       font-family: var(--fonte1);
       color: var(--cor1);
+      font-size: 2.2rem;
+      text-align: center;
+      text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5);
     }
 
     label {
       font-family: var(--fonte2);
+      display: block;
+      margin-bottom: 5px;
+      color: var(--cor1);
+    }
+
+    .solid {
+      background-color: var(--cor4);
+      color: white;
+      border: none;
+      font-size: 1.1rem;
+    }
+
+    .solid:hover {
+      background-color: #A43838;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .solid:active {
+      transform: translateY(0);
+    }
+
+    .clear {
+      background-color: transparent;
+      color: var(--cor1);
+      border: 2px solid var(--cor1);
+    }
+
+    .clear:hover {
+      background-color: var(--cor1);
+      color: var(--cor2);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #signup-button {
+      background-color: var(--cor1);
+      color: var(--cor2);
+      border: none;
+      margin-top: 10px;
+    }
+
+    #signup-button:hover {
+      background-color: #363823;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      box-shadow: none !important;
     }
 
     :root {
       --cor1: #45462A;
       --cor2: #f4e3b2;
       --cor3: #947268;
-      --cor4: #c2486a;
+      --cor4: #C94A4A;
       --fonte2: "Inter", sans-serif;
-      --fonte1: "Cherry Bomb One", system-ui;
+      --fonte1: "Barriecito", system-ui;
     }
-  </style>
+</style>
   <script src="login.js"></script>
 </body>
 </html>
