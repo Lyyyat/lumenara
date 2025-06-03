@@ -6,7 +6,7 @@
     <title>lumenara</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ribeye&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,16 +20,17 @@
             </div>
             <nav class="menu">
                 <ul class="navbar-itens">
-                    <li><a href="index.html">Início</a></li>
                     <li class="dropdown">
                         <a href="#Produtos" class="dropbtn">Produtos</a>
-                        <div class="dropdown-content">
-                            <a href="#">Álbuns</a>
-                            <a href="#">Lightsticks</a>
-                            <a href="#">Merch</a>
-                        </div>
+                            <div class="dropdown-content">
+                                <a href="#" onclick="filtrarPorCategoria('Todos')">Todos</a>
+                                <a href="#" onclick="filtrarPorCategoria('Hirono')">Hirono</a>
+                                <a href="#" onclick="filtrarPorCategoria('Dimoo')">Dimoo</a>
+                                <a href="#" onclick="filtrarPorCategoria('Pucky')">Pucky</a>
+                            </div>
                     </li>
-                    <li><a href="sobre.html">Sobre nós</a></li>
+                    <li><a href="#">Sobre nós</a></li>
+                    <li><a href="#">Contato</a></li>
                 </ul>
             </nav>
             <div class="auth-buttons">
@@ -40,7 +41,7 @@
 
         </div>
         <section>
-            <input id="campo-pesquisa" type="text" placeholder="Digite o nome do álbum ou artista">
+            <input id="campo-pesquisa" type="text" placeholder="Procure o produto">
             <button onclick="pesquisar()">Pesquisar</button>
         </section>
 
@@ -50,29 +51,15 @@
             
 
            <section id="Produtos">
-            <h1>Produtos</h1>
             <div class="carrossel-container">
                 <button class="carrossel-seta seta-esquerda">&lt;</button>
                 <div class="carrossel">
                     <div class="produtos-wrapper">
-                        <!-- Produtos serão inseridos aqui via JavaScript -->
                     </div>
                 </div>
                 <button class="carrossel-seta seta-direita">&gt;</button>
             </div>
             </section>
-            
-            <!-- Pop-up de detalhes do produto -->
-            <div id="produto-popup" class="popup">
-                <div class="popup-content">
-                    <span class="close-popup">&times;</span>
-                    <img id="popup-img" src="" alt="Produto">
-                    <h2 id="popup-nome"></h2>
-                    <p id="popup-descricao"></p>
-                    <p class="preco">Preço: R$ 59,90</p>
-                    <a id="popup-link" href="#" class="ver-mais">Ver mais</a>
-                </div>
-            </div>
         </main>
     </div>
 
