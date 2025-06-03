@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     carregarProdutos();
     setupEventListeners();
     verificarUsuarioLogado();
-    a
+    
     window.addEventListener('resize', function() {
         updateCardsPerPage();
         updateCarrossel();
@@ -141,7 +141,6 @@ function setupEventListeners() {
         });
     }
     
-    // Pesquisa
     const btnPesquisar = document.querySelector('button[onclick="pesquisar()"]');
     const campoPesquisa = document.getElementById('campo-pesquisa');
     
@@ -234,7 +233,7 @@ function updateHeaderUI(user) {
         return;
     }
     
-    if (user) {o
+    if (user) {
         headerBox.classList.add('user-logged-in');
 
         const username = user.email.split('@')[0];
