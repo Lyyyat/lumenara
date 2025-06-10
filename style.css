@@ -363,6 +363,26 @@ h1{
     }
 }
 
+@media (max-width: 768px) {
+    .produtos-wrapper {
+        justify-content: center;
+    }
+    
+    .produto-card {
+        flex: 0 0 calc(100% - 40px) !important;
+        max-width: 300px;
+    }
+}
+
+.produtos-wrapper:has(.produto-card:only-child) {
+    justify-content: center;
+}
+
+.produto-card:only-child {
+    flex: 0 0 auto !important;
+    margin: 0 auto;
+}
+
 .dropdown {
     position: relative;
     display: inline-block;
