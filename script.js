@@ -1,3 +1,4 @@
+
 const firebaseConfig = {
     apiKey: "AIzaSyBmnU28QAKRvijZcKTIzLhrRNbZDTzdqNM",
     authDomain: "lumenara-3acb5.firebaseapp.com",
@@ -47,14 +48,18 @@ function updateCarrossel() {
     produtoCards = document.querySelectorAll('.produto-card');
     
     if (produtoCards.length === 0) return;
+    const cardStyle = window.getComputedStyle(produtoCards[0]);
+    const cardWidth = produtoCards[0].offsetWidth + 
+                     parseInt(cardStyle.marginLeft) + 
+                     parseInt(cardStyle.marginRight);
+    const maxIndex = Math.max(0, Math.ceil(produtoCards.length / cardsPerPage) - 1);
+    currentIndex = Math.min(currentIndex, maxIndex);
     
-    const cardWidth = produtoCards[0].offsetWidth + 20;
     const translateX = -currentIndex * cardWidth * cardsPerPage;
     produtosWrapper.style.transform = `translateX(${translateX}px)`;
     
     document.querySelector('.seta-esquerda').disabled = currentIndex === 0;
-    document.querySelector('.seta-direita').disabled = 
-        currentIndex >= Math.ceil(produtoCards.length / cardsPerPage) - 1;
+    document.querySelector('.seta-direita').disabled = currentIndex >= maxIndex;
     
     produtoCards.forEach(card => {
         card.style.height = '100%';
@@ -180,6 +185,8 @@ function pesquisar() {
     currentIndex = 0;
     carregarProdutos();
     dados = dadosOriginais;
+    
+    setTimeout(updateCarrossel, 100);
 }
 
 function verificarUsuarioLogado() {
