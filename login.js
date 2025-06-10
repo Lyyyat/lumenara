@@ -7,29 +7,24 @@ const firebaseConfig = {
     appId: "1:309416608169:web:571ba528cc32c2f73704b8"
 };
 
-// Debug: Verifica se o Firebase já foi inicializado
 console.log("Firebase apps:", firebase.apps);
 
-// Inicializa Firebase apenas se não estiver inicializado
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig);
 } else {
-    firebase.app(); // Já está inicializado, usa a instância existente
+    firebase.app(); 
 }
 
 const auth = firebase.auth();
 
-// Debug: Verifica o objeto auth
 console.log("Auth object:", auth);
 
-// Referências de elementos
 const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const loginButton = document.getElementById("login-button");
 const recoverButton = document.getElementById("recover-password-button");
 const signupButton = document.getElementById("signup-button");
 
-// Debug: Verifica elementos do DOM
 console.log("Elementos:", {
     emailInput,
     passwordInput,
@@ -38,7 +33,6 @@ console.log("Elementos:", {
     signupButton
 });
 
-// Validação de campos
 function validacao() {
     const email = emailInput.value;
     const senha = passwordInput.value;
@@ -50,7 +44,6 @@ function validacao() {
     console.log("Validação:", {email, senha, habilita});
 }
 
-// Login
 loginButton.addEventListener("click", () => {
     const email = emailInput.value;
     const senha = passwordInput.value;
@@ -68,7 +61,6 @@ loginButton.addEventListener("click", () => {
         });
 });
 
-// Recuperar senha
 recoverButton.addEventListener("click", () => {
     const email = emailInput.value;
     console.log("Tentando recuperar senha para:", email);
@@ -83,7 +75,6 @@ recoverButton.addEventListener("click", () => {
         });
 });
 
-// Cadastro
 signupButton.addEventListener("click", function() {
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
@@ -107,7 +98,6 @@ signupButton.addEventListener("click", function() {
         });
 });
 
-// Inicializa validação
 emailInput.addEventListener("input", validacao);
 passwordInput.addEventListener("input", validacao);
 validacao(); 
