@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Clientes</title>
+    <link rel="stylesheet" href="cadascli.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barriecito&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html" class="botao-voltar" title="Voltar">&#8592;</a>
+    
+    <div class="container">
+        <!-- Seção de Cadastro -->
+        <div class="section">
+            <h1>CADASTRO DE CLIENTES</h1>
+            <form id="formCadastroCliente">
+                <input type="text" id="cpfCliente" placeholder="CPF (somente números)" required>
+                <input type="text" id="nomeCliente" placeholder="Nome Completo" required>
+                <input type="email" id="emailCliente" placeholder="E-mail">
+                <input type="tel" id="telefoneCliente" placeholder="Telefone">
+                <input type="text" id="enderecoCliente" placeholder="Endereço">
+                <input type="text" id="cidadeCliente" placeholder="Cidade">
+                <input type="text" id="estadoCliente" placeholder="Estado" maxlength="2">
+                
+                <div class="action-buttons">
+                    <button type="button" id="btnCadastrarCliente" class="btn-cadastrar">Cadastrar</button>
+                    <button type="button" id="btnLimparCliente" class="btn-limpar">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Seção de Busca e Gerenciamento -->
+        <div class="section">
+            <h1>GERENCIAR CLIENTES</h1>
+            <form id="formGerenciarCliente">
+                <input type="text" id="buscaCpfCliente" placeholder="Digite o CPF para buscar" required>
+                <button type="button" id="btnBuscarCliente" class="btn-buscar">Buscar Cliente</button>
+
+                <div id="dadosCliente" style="display: none;">
+                    <input type="text" id="editarNomeCliente" placeholder="Nome Completo">
+                    <input type="email" id="editarEmailCliente" placeholder="E-mail">
+                    <input type="tel" id="editarTelefoneCliente" placeholder="Telefone">
+                    <input type="text" id="editarEnderecoCliente" placeholder="Endereço">
+                    <input type="text" id="editarCidadeCliente" placeholder="Cidade">
+                    <input type="text" id="editarEstadoCliente" placeholder="Estado" maxlength="2">
+                    
+                    <div class="action-buttons">
+                        <button type="button" id="btnAtualizarCliente" class="btn-atualizar">Atualizar</button>
+                        <button type="button" id="btnExcluirCliente" class="btn-deletar">Excluir</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="cliente.js"></script>
+</body>
+</html>
